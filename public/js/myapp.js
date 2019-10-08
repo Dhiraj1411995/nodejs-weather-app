@@ -19,7 +19,7 @@ document.addEventListener('submit',(e)=>{
     paragraph[1].textContent='Loading...'
     e.preventDefault()
     const searchval=search.value
-        fetch('http://localhost:3000/weather?address='+searchval).then((response)=>{
+        fetch('/weather?address='+searchval).then((response)=>{//fetch('http://localhost:3000/weather?address='+searchval).then((response)=>
             response.json().then((data)=>{
                 if(data.error){
                     paragraph[1].textContent=''

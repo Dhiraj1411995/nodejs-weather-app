@@ -2,7 +2,7 @@ const path=require('path')
 const express=require('express')
 const geocode_forecast=require('./utils/geocode-forecast.js')
 const app=express()
-
+const port=process.env.PORT || 3000
 const staticPath=path.join(__dirname,'../public')
 const viewsPath=path.join(__dirname,'../views')
 
@@ -84,6 +84,6 @@ app.get('/weather',(req,res)=>{
     })
 
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server starts')
 })
