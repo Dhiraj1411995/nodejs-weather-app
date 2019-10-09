@@ -30,7 +30,7 @@ const forecast=(lat,lon,callback)=>{
             callback('unable to find location',undefined)
         }
         else{
-            callback(undefined,`the current climate state: ${body.currently.summary} It is ${body.currently.temperature} and there is ${body.currently.precipProbability}% chance of rain.`)
+            callback(undefined,`the current climate state: ${body.currently.summary} It is ${body.currently.temperature} degrees out and there is ${body.currently.precipProbability}% chance of rain. Also the min temperature of the day is ${body.daily.data[0].temperatureMin} and max temperature of the day is ${body.daily.data[0].temperatureMax}`)
         }                                                  //${response.body.currently.summary}     ${response.body.currently.temperature}              ${response.body.currently.precipProbability}
     })
 }
